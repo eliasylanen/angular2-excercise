@@ -1,0 +1,6 @@
+.is-done {
+  text-decoration: line-through;
+}
+.is-hovered {
+  background-color: yellow;
+}

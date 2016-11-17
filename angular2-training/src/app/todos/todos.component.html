@@ -1,0 +1,23 @@
+<app-todo
+  *ngFor="let todo of todos; let i = index;"
+  [item]="todo"
+  [index]="i"
+></app-todo>
+
+<form>
+  <label for="name">Name:</label>
+  <input
+    [(ngModel)]="name"
+    name="name"
+    id="name"
+    minlength="6"
+    #nameControl="ngModel"
+    required
+  />
+  <div [hidden]="!nameControl.invalid">
+    Name is required!
+  </div>
+  <button (click)="addItem()" [disabled]="!name">
+    Add
+  </button>
+</form>

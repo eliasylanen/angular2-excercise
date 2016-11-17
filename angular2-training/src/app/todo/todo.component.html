@@ -1,0 +1,9 @@
+<div
+  (click)="handleClick()"
+  (mouseenter)="item.hovered = true"
+  (mouseleave)="item.hovered = false"
+  [class.is-done]="item.done"
+  [class.is-hovered]="item.hovered"
+>
+  {{ index+1 }}: {{ item.name }} - {{ item.done ? 'Done\'d' : 'Not done' }}
+</div>
